@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "construction": "make mistakes",
+    "translation": "делать ошибки",
+    "wordCount": "2"
+  },
+  {
+    "id": 1,
+    "word": "not so often",
+    "transaction": "не так часто",
+    "wordCount": "3"
+  },
+  {
+    "id": 2,
+    "word": "of course",
+    "transaction": "конечно",
+    "wordCount": "2"
+  },
+  {
+    "id": 3,
+    "word": "at the same time",
+    "transaction": "в тоже самое время",
+    "wordCount": "4"
+  },
+  {
+    "id": 4,
+    "word": "much more",
+    "transaction": "намного больше",
+    "wordCount": "2"
+  }
+]

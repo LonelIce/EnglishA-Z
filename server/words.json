@@ -1,0 +1,724 @@
+[
+  {
+    "id": 0,
+    "word": "word",
+    "translate": "слово",
+    "partOfSpeech": "существительное"
+  },
+  {
+    "id": 1,
+    "word": "i",
+    "transaction": "я",
+    "partOfSpeech": "местоимение"
+  },
+  {
+    "id": 2,
+    "word": "like",
+    "transaction": "нравится",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 3,
+    "word": "know",
+    "transaction": "знать",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 4,
+    "word": "live",
+    "transaction": "жить",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 5,
+    "word": "Place",
+    "transaction": "место",
+    "partOfSpeech": "существительное"
+  },
+  {
+    "id": 6,
+    "word": "have",
+    "transaction": "иметь",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 7,
+    "word": "wont",
+    "transaction": "хотеть",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 8,
+    "word": "learn",
+    "transaction": "учить",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 9,
+    "word": "understand",
+    "transaction": "понимать",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 10,
+    "word": "live",
+    "transaction": "жить",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 11,
+    "word": "see",
+    "transaction": "видеть",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 12,
+    "word": "agree",
+    "transaction": "соглашаться",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 13,
+    "word": "movie",
+    "transaction": "фильм",
+    "partOfSpeech": "существительное"
+  },
+  {
+    "id": 14,
+    "word": "work",
+    "transaction": "работать",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 15,
+    "word": "study",
+    "transaction": "учиться",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 16,
+    "word": "thing",
+    "transaction": "вещь",
+    "partOfSpeech": "существительное"
+  },
+  {
+    "id": 17,
+    "word": "do",
+    "transaction": "делать",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 18,
+    "word": "often",
+    "transaction": "часто",
+    "partOfSpeech": "наречие"
+  },
+  {
+    "id": 19,
+    "word": "call",
+    "transaction": "звонить",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 20,
+    "word": "better",
+    "transaction": "лучше",
+    "partOfSpeech": "наречие"
+  },
+  {
+    "id": 21,
+    "word": "really",
+    "transaction": "действительно",
+    "partOfSpeech": "наречие"
+  },
+  {
+    "id": 22,
+    "word": "together",
+    "transaction": "вместе",
+    "partOfSpeech": "наречие"
+  },
+  {
+    "id": 23,
+    "word": "get",
+    "transaction": "получать",
+    "partOfSpeech": "глагол"
+  },
+  {
+    "id": 24,
+    "word": "enough",
+    "transaction": "достаточно",
+    "partOfSpeech": "наречие"
+  },
+  {
+    "id": 25,
+    "word": "or",
+    "transaction": "или",
+    "partOfSpeech": "союз"
+  },
+  {
+    "id": 26,
+    "word": "also",
+    "transaction": "также",
+    "partOfSpeech": "союз"
+  },
+  {
+    "id": 27,
+    "word": "what",
+    "transaction": "что"
+  },
+  {
+    "id": 28,
+    "word": "where",
+    "transaction": "куда"
+  },
+  {
+    "id": 29,
+    "word": "why",
+    "transaction": "почему"
+  },
+  {
+    "id": 30,
+    "word": "when",
+    "transaction": "когда"
+  },
+  {
+    "id": 31,
+    "word": "How",
+    "transaction": "как"
+  },
+  {
+    "id": 32,
+    "word": "now",
+    "transaction": "сейчас"
+  },
+  {
+    "id": 33,
+    "word": "about",
+    "transaction": "про"
+  },
+  {
+    "id": 34,
+    "word": "on",
+    "transaction": "над"
+  },
+  {
+    "id": 35,
+    "word": "mistake",
+    "transaction": " ошибка"
+  },
+  {
+    "id": 36,
+    "word": "improve",
+    "transaction": "улучшать"
+  },
+  {
+    "id": 37,
+    "word": "listening",
+    "transaction": "аудирование"
+  },
+  {
+    "id": 38,
+    "word": "grammar",
+    "transaction": "граматика"
+  },
+  {
+    "id": 39,
+    "word": "spend",
+    "transaction": "проводить"
+  },
+  {
+    "id": 40,
+    "word": "remember",
+    "transaction": "помнить"
+  },
+  {
+    "id": 41,
+    "word": "much",
+    "transaction": "много"
+  },
+  {
+    "id": 42,
+    "word": "happen",
+    "transaction": "происходит"
+  },
+  {
+    "id": 43,
+    "word": "his",
+    "transaction": "своё"
+  },
+  {
+    "id": 44,
+    "word": "him",
+    "transaction": "ему"
+  },
+  {
+    "id": 45,
+    "word": "now",
+    "transaction": "сейчас"
+  },
+  {
+    "id": 46,
+    "word": "begin",
+    "transaction": "начинать"
+  },
+  {
+    "id": 47,
+    "word": "seem",
+    "transaction": "казаться"
+  },
+  {
+    "id": 48,
+    "word": "noun",
+    "transaction": "существительное"
+  },
+  {
+    "id": 49,
+    "word": "some",
+    "transaction": "некоторые",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "id": 50,
+    "word": "interesting",
+    "transaction": "интересный",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": 51,
+    "word": "useful",
+    "transaction": "полезный",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": 52,
+    "word": "read",
+    "transaction": "читать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 53,
+    "word": "book",
+    "transaction": "книга",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 54,
+    "word": "different",
+    "transaction": "различный",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": 55,
+    "word": "listen",
+    "transaction": "слушать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 56,
+    "word": "need",
+    "transaction": "нуждаться",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 57,
+    "word": "confident",
+    "transaction": "уверенный",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": 58,
+    "word": "exercise",
+    "transaction": "упражнение",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 59,
+    "word": "those",
+    "transaction": "те",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 60,
+    "word": "these",
+    "transaction": "эти",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "id": 61,
+    "word": "this",
+    "transaction": "этот",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "id": 62,
+    "word": "call",
+    "transaction": "звонить",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 63,
+    "word": "brother",
+    "transaction": "брат",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 64,
+    "word": "sister",
+    "transaction": "сестра",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 65,
+    "word": "car",
+    "transaction": "машина",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 66,
+    "word": "country",
+    "transaction": "страна",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 67,
+    "word": "happy",
+    "transaction": "счастливый",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": 68,
+    "word": "such",
+    "transaction": " такой",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "id": 69,
+    "word": "look",
+    "transaction": "выглядеть",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 70,
+    "word": "strange",
+    "transaction": "странный",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": 71,
+    "word": "strange",
+    "transaction": "странный",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": 72,
+    "word": "offer",
+    "transaction": "предложение",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 73,
+    "word": "teach",
+    "transaction": "преподавать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 74,
+    "word": "miss",
+    "transaction": "скучать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 75,
+    "word": "always",
+    "transaction": "всегда",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": 76,
+    "word": "finish",
+    "transaction": "заканчивать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 77,
+    "word": "relax",
+    "transaction": "отдыхать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 78,
+    "word": "try",
+    "transaction": "пытаться",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 79,
+    "word": "find",
+    "transaction": "находить",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 80,
+    "word": "parents",
+    "transaction": "родители",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 81,
+    "word": "friend",
+    "transaction": "друг",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 82,
+    "word": "everything",
+    "transaction": "всё",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "id": 83,
+    "word": "check",
+    "transaction": "проверять",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 84,
+    "word": "father",
+    "transaction": "отец",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 85,
+    "word": "say",
+    "transaction": "сказать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 86,
+    "word": "profit",
+    "transaction": "прибыль",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 87,
+    "word": "big",
+    "transaction": "большой",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": 88,
+    "word": "support",
+    "transaction": "поддерживать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 89,
+    "word": "teacher",
+    "transaction": "учитель",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 90,
+    "word": "come",
+    "transaction": "приходить",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 91,
+    "word": "late",
+    "transaction": "поздно",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": 92,
+    "word": "person",
+    "transaction": "человек",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 93,
+    "word": "people",
+    "transaction": "люди",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 94,
+    "word": "success",
+    "transaction": "успех",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 95,
+    "word": "dress",
+    "transaction": "платье",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 96,
+    "word": "apartment",
+    "transaction": "квартира",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 97,
+    "word": "flat",
+    "transaction": "квартира",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 98,
+    "word": "without",
+    "transaction": "без",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "id": 99,
+    "word": "be",
+    "transaction": "быть",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 100,
+    "word": "now",
+    "transaction": "сейчас",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": 101,
+    "word": "again",
+    "transaction": "снова",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": 102,
+    "word": "abroad",
+    "transaction": "заграница",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 103,
+    "word": "another",
+    "transaction": "другой",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "id": 104,
+    "word": "without",
+    "transaction": "без",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "id": 105,
+    "word": "correctly",
+    "transaction": "правильно",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "id": 106,
+    "word": "cup",
+    "transaction": "чашка",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 107,
+    "word": "visit",
+    "transaction": "посещать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 108,
+    "word": "become",
+    "transaction": "становиться",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 109,
+    "word": "discuss",
+    "transaction": "обсуждать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 110,
+    "word": "later",
+    "transaction": "позже",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "id": 111,
+    "word": "interest",
+    "transaction": "интересовать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 112,
+    "word": "attract",
+    "transaction": "привлекать",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 113,
+    "word": "future",
+    "transaction": "будующее",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 114,
+    "word": "son",
+    "transaction": "сын",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 115,
+    "word": "daughter",
+    "transaction": "дочь",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 116,
+    "word": "believe",
+    "transaction": "верить",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 117,
+    "word": "bring",
+    "transaction": "приносить",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 118,
+    "word": "happiness",
+    "transaction": "счастье",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 119,
+    "word": "need",
+    "transaction": "нуждаться",
+    "partOfSpeech": "verb"
+  },
+  {
+    "id": 120,
+    "word": "rule",
+    "transaction": "правило",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 121,
+    "word": "any",
+    "transaction": "какой-нибудь",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "id": 122,
+    "word": "advice",
+    "transaction": "совет",
+    "partOfSpeech": "noun"
+  },
+  {
+    "id": 123,
+    "word": "less",
+    "transaction": "меньше",
+    "partOfSpeech": "adverb"
+  }
+]

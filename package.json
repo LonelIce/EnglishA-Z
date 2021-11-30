@@ -1,0 +1,12 @@
+{
+  "name": "EnglishA-Z",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd D:/JS/EnglishA-Z/client && npm start",
+    "server": "cd D:/JS/EnglishA-Z/server && npm run dev",
+    "all": "concurrently --kill-others \"npm run client\" \"npm run server\""
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
+}
