@@ -4,6 +4,7 @@ import LearnWords from './LearnWords/LearnWords';
 import Dictionary from './dictionary/Dictionary';
 import AddWord from './dictionary/add/AddWord/AddWord';
 import AddConstruction from './dictionary/add/AddConstruction/AddConstruction';
+import View from './dictionary/View/View';
 
 const Main = function () {
   return (
@@ -16,6 +17,7 @@ const Main = function () {
           path='/dictionary/addConstruction'
           element={<AddConstruction />}
         />
+        <Route path='/dictionary/view' element={<View />} />
       </Routes>
     </main>
   );

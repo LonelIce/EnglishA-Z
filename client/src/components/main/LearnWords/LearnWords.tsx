@@ -1,37 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { FC } from 'react';
+import Card from './Card/Card';
 
-interface Words {
-  id: number;
-  word: string;
-  translation: string;
-}
-
-const LearnWords = function () {
-  const [words, setWords] = useState<Words[]>([]);
-
-  async function fetchWords() {
-    try {
-      const response = await axios.get<Words[]>('http://localhost:2000/words');
-      setWords(response.data);
-    } catch (e) {
-      console.log('error data');
-    }
-  }
-
-  useEffect(() => {
-    fetchWords();
-  }, []);
-
+const LearnWords: FC = function () {
   return (
     <div>
-      {words.map((word) => (
-        <div>
-          {word.id}
-          {word.word}
-          {word.translation}
-        </div>
-      ))}
+      Выберите категорию
+      <Card onClick={() => console.log(1)}>Учить слова</Card>
+      <Card onClick={() => console.log(1)}>Учить конструкции</Card>
     </div>
   );
 };

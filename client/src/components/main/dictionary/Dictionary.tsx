@@ -6,7 +6,7 @@ const Dictionary: FC = function () {
     <div>
       <NavLink to='/dictionary/addWord'>Добавить слова</NavLink>
       <NavLink to='/dictionary/addConstruction'>Добавить конструкции</NavLink>
-      <NavLink to='/dictionary/see'>Смотреть мой словарь</NavLink>
+      <NavLink to='/dictionary/view'>Смотреть мой словарь</NavLink>
     </div>
   );
 };
