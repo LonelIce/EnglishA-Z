@@ -1,4 +1,4 @@
-import Word from "../shemas/Word.js";
+import Word from "../models/Word.js";
 
 class WordService {
     async create(word) {
@@ -26,7 +26,7 @@ class WordService {
     }
 
     async delete(id) {
-        if (!id)throw new Error('Id не указан');
+        if (!id) throw new Error('Id не указан');
         const word = await Word.findByIdAndDelete(id);
         return word
     }

@@ -21,7 +21,7 @@ class ConstructionController {
 
     async getOne(request, response) {
         try {
-            const construction= await ConstructionService.getOne(request.params.id)
+            const construction = await ConstructionService.getOne(request.params.id)
             response.json(construction);
         } catch (e) {
             response.status(500).json(e.message);
@@ -30,7 +30,7 @@ class ConstructionController {
 
     async update(request, response) {
         try {
-            const updatedConstruction= await ConstructionService.update(request.body);
+            const updatedConstruction = await ConstructionService.update(request.body);
             return response.json(updatedConstruction);
         } catch (e) {
             response.status(500).json(e.message);
@@ -39,18 +39,18 @@ class ConstructionController {
 
     async delete(request, response) {
         try {
-            const deletedConstruction= await ConstructionService.delete(request.params.id);
+            const deletedConstruction = await ConstructionService.delete(request.params.id);
             return response.json(deletedConstruction);
         } catch (e) {
             response.status(500).json(e.message);
         }
     }
 
-    async deleteAll(request, response){
-        try{
-            const constructions =await ConstructionService.deleteAll();
+    async deleteAll(request, response) {
+        try {
+            const constructions = await ConstructionService.deleteAll();
             return response.json(constructions);
-        }catch (e) {
+        } catch (e) {
             response.status(500).json(e)
         }
     }

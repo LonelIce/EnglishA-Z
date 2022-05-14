@@ -1,4 +1,4 @@
-import Constuction from "../shemas/Constuction.js";
+import Constuction from "../models/Constuction.js";
 
 class ConstructionService {
     async create(construction) {
@@ -23,14 +23,14 @@ class ConstructionService {
         return updatedConstruction;
     }
 
-    async delete(id){
+    async delete(id) {
         if (!id) throw new Error('Id не указан');
-        const deletedConstruction= Constuction.findByIdAndDelete(id);
+        const deletedConstruction = Constuction.findByIdAndDelete(id);
         return deletedConstruction;
     }
 
-    async deleteAll(){
-        const deletedConstructions=Constuction.deleteMany({});
+    async deleteAll() {
+        const deletedConstructions = Constuction.deleteMany({});
         return deletedConstructions;
     }
 

@@ -9,8 +9,5 @@
   },
   "devDependencies": {
     "concurrently": "^6.4.0"
-  },
-  "dependencies": {
-    "mongoose": "^6.2.10"
   }
 }
