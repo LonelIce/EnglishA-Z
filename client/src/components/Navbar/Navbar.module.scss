@@ -1,0 +1,68 @@
+@import "/src/styles/variables";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: $blueberry;
+  height: 75px;
+
+  .wrapperLogo {
+    display: flex;
+
+    &:after {
+      content: '';
+      background-image: url("../../assets/HeaderBg.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 100% 100%;
+      height: 75px;
+      width: 82.5px;
+      transform: scale(-1);
+    }
+
+    .logo {
+      background-color: $darkGreen;
+      min-width: 100px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .logoImg {
+        height: 50px;
+        width: auto;
+        fill: $blueberry;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .menuIcon {
+      display: none;
+    }
+  }
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}

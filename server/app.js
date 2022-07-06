@@ -13,7 +13,10 @@ const PORT = process.env.PORT || 2000;//достаем переменную из
 const app = express();
 app.use(express.json());//позволяет парсить JSON
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+    credentials:true,
+    origin: process.env.CLIENT_URL
+    }));
 app.use('/word', wordRouter);
 app.use('/construction', constructionRouter);
 app.use('/api', authorizationRouter);

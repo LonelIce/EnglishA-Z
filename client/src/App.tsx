@@ -1,17 +1,14 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import Header from './components/header/Header';
-import Main from './components/main/Main';
-import Footer from './components/footer/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import StartPage from './pages/StartPage';
+import './styles/globale.scss';
 
 const App = function () {
   return (
     <BrowserRouter>
-      <div>
-        <Header />
-        <Main />
-        <Footer />
-      </div>
+      <Routes>
+        <Route path='/' element={<StartPage />} />
+      </Routes>
     </BrowserRouter>
   );
 };

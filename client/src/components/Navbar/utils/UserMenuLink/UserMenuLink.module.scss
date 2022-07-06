@@ -1,0 +1,54 @@
+@import "/src/styles/variables";
+
+.userMenuLink {
+  display: flex;
+
+  &:before {
+    content: '';
+    height: 75px;
+    width: 82.5px;
+    background-image: url("../../../../assets/HeaderBg.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .linkWrapper {
+    display: flex;
+    align-items: center;
+    background-color: $darkGreen;
+    min-width: 100px;
+    height: 75px; //не нравится
+
+    a {
+      display: flex;
+      text-decoration: none;
+      position: relative;
+
+      .icon {
+        fill: $blueberry;
+        height: 30px;
+        padding-left: 8px;
+      }
+
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $blueberry;
+        font-family: 'Philosopher', sans-serif;
+        text-transform: uppercase;
+        font-size: 1em;
+      }
+
+      &:hover {
+        .text {
+          color: $gray-blue;
+        }
+
+        .icon {
+          fill: $gray-blue;
+        }
+      }
+    }
+  }
+}

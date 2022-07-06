@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="100" viewBox="0 0 110 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #003333;
+        stroke: #003333;
+        stroke-width: 5px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="A-Z_Header_1" data-name="A-Z Header 1" class="cls-1" d="M20,100L110,0V100H20ZM0,100L90,0h10L10,100H0Z"/>
+</svg>

@@ -1,0 +1,26 @@
+@import "/src/styles/variables";
+
+.wrapperLink {
+  background-color: $darkGreen;
+  margin-right: 20px;
+  padding: 8px 16px;
+  transform: skew(-45deg);
+
+  a {
+    display: flex;
+    text-decoration: none;
+    transform: skew(+45deg);
+    justify-content: center;
+
+    .text {
+      font-family: 'Philosopher', sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: $blueberry;
+    }
+  }
+
+  &:hover {
+    background-color: $gray-blue;
+  }
+}
