@@ -1,8 +1,7 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
 
 const StartPage = function () {
-  return <Navbar />;
+  return <main />;
 };
 
 export default StartPage;
