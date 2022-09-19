@@ -1,0 +1,13 @@
+@import "/src/styles/variables";
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  .greetingWrapper {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

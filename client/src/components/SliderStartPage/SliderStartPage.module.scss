@@ -1,0 +1,65 @@
+@import "/src/styles/variables";
+
+.slidersWrapper {
+  flex-basis: 50%;
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: opacity ease-in-out;
+  }
+
+  .arrow {
+    background-color: rgba(0,51,51,0.3);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 48px;
+    opacity:0;
+    border: none;
+    cursor: pointer;
+    fill:$gray-blue;
+
+    &:hover {
+      background-color:rgba(150,167,206,0.4);
+      fill:rgba(0,51,51,0.5);
+    }
+  }
+
+  .arrowRight {
+    right: 0;
+  }
+
+  .arrowLeft{
+    transform: rotate(180deg);
+  }
+
+  &:hover{
+    .arrow{
+      opacity: 1;
+    }
+  }
+}
+
+.fadeOut{
+  opacity: 0;
+}
+
+.fadeIn{
+  opacity: 1;
+}
+
+.cbbbb{
+  fill: red;
+}
