@@ -2,10 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 import { IUserState, UserRoles } from '../../models/states/userReducer';
 
 const initialState: IUserState = {
-  isAuthorization: true,
+  isAuthorization: false,
   userData: {
-    username: 'Lonel',
-    role: UserRoles.SIMPLE,
+    username: null,
+    role: UserRoles.NONE,
   },
 };
 

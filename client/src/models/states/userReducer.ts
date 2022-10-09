@@ -1,14 +1,15 @@
 export interface IUserState {
   isAuthorization: boolean;
-  userData: IUserData | null;
+  userData: IUserData;
 }
 
 export interface IUserData {
-  username: string;
+  username: string | null;
   role: UserRoles;
 }
 
 export enum UserRoles {
   SIMPLE = 'SIMPLE',
   VIP = 'VIP',
+  NONE = 'NONE',
 }
