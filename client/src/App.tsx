@@ -16,7 +16,7 @@ const App = function () {
         <Route path='/' element={<StartPage />} />
         <Route path='/dictionary' element={<Dictionary />} />
         <Route path='/train' element={<Train />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/login/*' element={<Login />} />
       </Routes>
       <Footer />
     </BrowserRouter>
