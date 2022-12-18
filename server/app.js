@@ -1,36 +1,25 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import cors from 'cors'
-import cookieParser from 'cookie-parser';
-import 'dotenv/config';//для доступа к переменным хранящимся в .enw
-import constructionRouter from "./routers/constructionsRouter.js";
-import wordRouter from "./routers/wordRouter.js";
-import authorizationRouter from "./routers/authorizationRouter.js";
-import ErrorMiddleware from "./middlewaree/ErrorMiddleware.js";
+import userRouter from "./routers/userRouter.js";
+import * as dotenv from 'dotenv'
+dotenv.config()
 
-const PORT = process.env.PORT || 2000;//достаем переменную из .env
+const app =express();
 
-const app = express();
-app.use(express.json());//позволяет парсить JSON
-app.use(cookieParser());
-app.use(cors({
-    credentials:true,
-    origin: process.env.CLIENT_URL
-    }));
-app.use('/word', wordRouter);
-app.use('/construction', constructionRouter);
-app.use('/api', authorizationRouter);
-app.use(ErrorMiddleware);//должен идти последним
+app.use(express.json())
 
-async function startApp() {
-    try {
-        await mongoose.connect(process.env.DB_URL, {useUnifiedTopology: true, useNewUrlParser: true}); //подключаемся к базе данных 1й параметр - url базы
-        app.listen(PORT, () => {
-            console.log("SERVER STARTED ON PORT ", PORT)
-        })
-    } catch (e) {
-        console.log(e);
+app.use('/user', userRouter);
+
+const start =async ()=>{
+    try{
+        await mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true},()=>{console.log('Подключились к БД')});
+
+        app.listen(process.env.PORT, ()=>{
+            console.log("Сервер работает на ", process.env.PORT," порту")
+        });
+    }catch (e) {
+        console.log(e)
     }
 }
 
-startApp();
+start();
