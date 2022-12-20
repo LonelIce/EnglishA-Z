@@ -30,7 +30,7 @@ const UserMenuLink: FC<UserMenuLinkProps> = function ({ isAuthorization }) {
       ) : (
         <div className={styles.linkWrapper}>
           <NavLink to='/profile'>
-            <span className={styles.text}>{userData?.username}</span>
+            <span className={styles.text}>{userData?.email}</span>
             {userData?.role === UserRoles.SIMPLE ? (
               <svg
                 className={styles.icon}

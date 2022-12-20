@@ -1,24 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { IUserState, UserRoles } from '../../models/states/userReducer';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IUserData, IUserState } from '../../models/states/userReducer';
 
 const initialState: IUserState = {
   isAuthorization: false,
-  userData: {
-    username: null,
-    role: UserRoles.NONE,
-  },
+  userData: null,
 };
 
 const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    toggleStatusAuthorization: (state) => {
-      state.isAuthorization = !state.isAuthorization;
-    },
+    registration: (state, action: PayloadAction<IUserData>) => ({
+      ...state,
+      isAuthorization: true,
+      userData: { ...action.payload },
+    }),
   },
 });
 
-export const { toggleStatusAuthorization } = userSlice.actions;
+export const { registration } = userSlice.actions;
 
 export default userSlice.reducer;

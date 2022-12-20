@@ -1,12 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import user from './slyces/user';
+import userSlice from './slyces/user';
 
 const store = configureStore({
   reducer: {
-    user,
+    user: userSlice,
   },
 });
 
-export type RootState = ReturnType<typeof store.getState>; // выводим типы из самого хранилища
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 
 export default store;

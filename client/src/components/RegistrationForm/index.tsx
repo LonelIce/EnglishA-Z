@@ -1,10 +1,27 @@
 import React, { FC, useState } from 'react';
-import styles from './RegistrationForm.module.scss';
 import { IRegistrationFormData } from './RegistrationForm.types';
+import styles from './RegistrationForm.module.scss';
+import AuthorizationService from '../../services/AuthorizationService';
+import useAppDispatch from '../../hooks/useAppDispatch';
+import { registration } from '../../store/slyces/user';
 
 const RegistrationForm: FC = function () {
+  const dispatch = useAppDispatch();
   const [registrationFormData, setRegistrationFormData] =
     useState<IRegistrationFormData>({ email: '', password: '' });
+
+  const sendRegistrationData = async () => {
+    try {
+      const response = await AuthorizationService.registration(
+        registrationFormData
+      );
+      console.log(response.data);
+      dispatch(registration(response.data));
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <form className={styles.form}>
       Зарегистрируйтесь
@@ -41,12 +58,7 @@ const RegistrationForm: FC = function () {
         value='Зарегистрироваться'
         onClick={(e) => {
           e.preventDefault();
-          console.log(
-            'Email-',
-            registrationFormData.email,
-            ' Pass-',
-            registrationFormData.password
-          );
+          sendRegistrationData();
         }}
       />
     </form>
