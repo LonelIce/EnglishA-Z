@@ -3,7 +3,7 @@ import { IRegistrationFormData } from './RegistrationForm.types';
 import styles from './RegistrationForm.module.scss';
 import AuthorizationService from '../../services/AuthorizationService';
 import useAppDispatch from '../../hooks/useAppDispatch';
-import { registration } from '../../store/slyces/user';
+import { setUserData } from '../../store/slyces/user';
 
 const RegistrationForm: FC = function () {
     const dispatch = useAppDispatch();
@@ -16,7 +16,7 @@ const RegistrationForm: FC = function () {
                 registrationFormData
             );
             console.log(response.data);
-            dispatch(registration(response.data));
+            dispatch(setUserData(response.data));
         } catch (e) {
             console.log(e);
         }

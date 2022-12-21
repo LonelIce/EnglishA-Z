@@ -1,12 +1,26 @@
 import React, { FC, useState } from 'react';
-import styles from './LoginForm.module.scss';
 import { ILoginFormData } from './LoginForm.types';
+import AuthorizationService from '../../services/AuthorizationService';
+import useAppDispatch from '../../hooks/useAppDispatch';
+import styles from './LoginForm.module.scss';
+import { setUserData } from '../../store/slyces/user';
 
 const LoginForm: FC = function () {
+    const dispatch = useAppDispatch();
     const [loginFormData, setLoginFormData] = useState<ILoginFormData>({
         email: '',
         password: '',
     });
+
+    const sendLoginFormData = async () => {
+        try {
+            const response = await AuthorizationService.login(loginFormData);
+            dispatch(setUserData(response.data));
+        } catch (e) {
+            console.log(e);
+        }
+    };
+
     return (
         <form className={styles.form}>
             Авторизуйтесь
@@ -43,12 +57,7 @@ const LoginForm: FC = function () {
                 value='Войти'
                 onClick={(e) => {
                     e.preventDefault();
-                    console.log(
-                        'Email-',
-                        loginFormData.email,
-                        'pass',
-                        loginFormData.password
-                    );
+                    sendLoginFormData();
                 }}
             />
         </form>

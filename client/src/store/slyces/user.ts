@@ -10,7 +10,7 @@ const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        registration: (state, action: PayloadAction<IUserData>) => ({
+        setUserData: (state, action: PayloadAction<IUserData>) => ({
             ...state,
             isAuthorization: true,
             userData: { ...action.payload },
@@ -18,6 +18,6 @@ const userSlice = createSlice({
     },
 });
 
-export const { registration } = userSlice.actions;
+export const { setUserData } = userSlice.actions;
 
 export default userSlice.reducer;
