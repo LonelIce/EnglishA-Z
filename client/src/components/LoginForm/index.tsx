@@ -16,8 +16,9 @@ const LoginForm: FC = function () {
         try {
             const response = await AuthorizationService.login(loginFormData);
             dispatch(setUserData(response.data));
-        } catch (e) {
-            console.log(e);
+        } catch (e: any) {
+            console.log(e.response?.data?.message);
+            alert(e.response?.data?.message);
         }
     };
 
