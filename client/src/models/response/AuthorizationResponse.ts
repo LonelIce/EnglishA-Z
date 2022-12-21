@@ -1,4 +1,4 @@
 export interface AuthorizationResponse {
-  email: string;
-  id: string;
+    email: string;
+    id: string;
 }

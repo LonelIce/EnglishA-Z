@@ -1,5 +1,5 @@
 export interface ISliderData {
-  slide: number;
-  fadeState: 'fadeIn' | 'fadeOut';
-  currentTimer: NodeJS.Timeout | null;
+    slide: number;
+    fadeState: 'fadeIn' | 'fadeOut';
+    currentTimer: NodeJS.Timeout | null;
 }
