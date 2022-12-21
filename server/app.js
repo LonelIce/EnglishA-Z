@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors'
 import userRouter from "./routers/userRouter.js";
+import errorMiddleware from "./middlewares/errorMiddleware.js";
 import * as dotenv from 'dotenv'
 dotenv.config()
 
@@ -11,9 +12,9 @@ app.use(cors({
     credentials:true,
     origin: process.env.CLIENT_URL
 }));
-app.use(express.json())
-
+app.use(express.json());
 app.use('/user', userRouter);
+app.use(errorMiddleware);
 
 const start =async ()=>{
     try{

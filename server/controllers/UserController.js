@@ -1,31 +1,30 @@
 import UserService from "../ services/UserService.js";
 import {validationResult} from "express-validator";
+import ApiError from "../exceptions/ApiError.js";
 
 class UserController {
     registration = async (request, response, next) => {
         try {
             const errors = validationResult(request);
             if (!errors.isEmpty())
-                return response.status(400).json(errors)
+                return next(ApiError.BadRequest('Ошибка валидации данных', errors.array()));
             const {email, password} = request.body;
             const userData = await UserService.registration(email, password);
 
             response.json(userData);
         } catch (e) {
-            console.log(e.message)
-            next();
+            next(e);
         }
     }
 
-    login = async (request, response) => {
+    login = async (request, response, next) => {
         try {
             const {email, password} = request.body;
             const userData = await UserService.login(email, password);
 
             response.json(userData);
         } catch (e) {
-            console.log(e.message);
-            next()
+            next(e);
         }
     }
 }
