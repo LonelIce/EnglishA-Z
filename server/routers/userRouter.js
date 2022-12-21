@@ -8,5 +8,6 @@ userRouter.post('/registration',
     body('email').isEmail(),
     body('password').isLength({min: 8, max: 20}),
     UserController.registration)
+userRouter.post('/login', UserController.login);
 
 export default userRouter;

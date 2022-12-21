@@ -1,4 +1,4 @@
-class UserDTO {
+class UserDto {
     email;
     id;
 
@@ -8,4 +8,4 @@ class UserDTO {
     }
 }
 
-export default UserDTO;
+export default UserDto;
