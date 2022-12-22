@@ -1,13 +1,8 @@
 import React, { FC } from 'react';
 import styles from './Navbar.module.scss';
-import CustomNavLink from './utils/CustomNavLink';
 import UserMenuLink from './utils/UserMenuLink';
-import useTypesSelector from '../../hooks/useTypesSelector';
 
 const Navbar: FC = function () {
-    const isAuthorization = useTypesSelector(
-        (state) => state.user.isAuthorization
-    );
     return (
         <header className={styles.header}>
             <div className={styles.wrapperLogo}>
@@ -32,20 +27,9 @@ const Navbar: FC = function () {
                 </svg>
                 <ul className={styles.links}>
                     <li className={styles.navLinksWrapper}>
-                        <ul className={styles.navLinks}>
-                            {isAuthorization && (
-                                <>
-                                    <CustomNavLink path='/train'>
-                                        Тренировка
-                                    </CustomNavLink>
-                                    <CustomNavLink path='/dictionary'>
-                                        Мой словарь
-                                    </CustomNavLink>
-                                </>
-                            )}
-                        </ul>
+                        <ul className={styles.navLinks}>Основные ссылки</ul>
                     </li>
-                    <UserMenuLink isAuthorization={isAuthorization} />
+                    <UserMenuLink />
                 </ul>
             </nav>
         </header>
