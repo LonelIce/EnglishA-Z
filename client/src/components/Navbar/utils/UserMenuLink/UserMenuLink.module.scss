@@ -19,16 +19,16 @@
     min-width: 100px;
     height: 75px; //не нравится
 
+    .activeLink {//активное состояние ссылки
+      .text {
+        color: $gray-blue;
+      }
+    }
+
     a {
       display: flex;
       text-decoration: none;
       position: relative;
-
-      .icon {
-        fill: $blueberry;
-        height: 30px;
-        padding-left: 8px;
-      }
 
       .text {
         display: flex;
@@ -43,10 +43,6 @@
       &:hover {
         .text {
           color: $gray-blue;
-        }
-
-        .icon {
-          fill: $gray-blue;
         }
       }
     }
