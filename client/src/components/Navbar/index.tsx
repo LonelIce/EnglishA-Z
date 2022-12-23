@@ -1,8 +1,12 @@
 import React, { FC } from 'react';
 import styles from './Navbar.module.scss';
 import UserMenuLink from './utils/UserMenuLink';
+import useTypesSelector from '../../hooks/useTypesSelector';
 
 const Navbar: FC = function () {
+    const isAuthorization = useTypesSelector(
+        (state) => state.user.isAuthorization
+    );
     return (
         <header className={styles.header}>
             <div className={styles.wrapperLogo}>
@@ -29,7 +33,11 @@ const Navbar: FC = function () {
                     <li className={styles.navLinksWrapper}>
                         <ul className={styles.navLinks}>Основные ссылки</ul>
                     </li>
-                    <UserMenuLink />
+                    {isAuthorization ? (
+                        <UserMenuLink path='/profile'>Профиль</UserMenuLink>
+                    ) : (
+                        <UserMenuLink path='/login'>Войти</UserMenuLink>
+                    )}
                 </ul>
             </nav>
         </header>

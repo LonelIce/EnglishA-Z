@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Login from './pages/Login';
 import RegistrationForm from './components/RegistrationForm';
+import Profile from './pages/Profile';
 
 const App = function () {
     return (
@@ -13,6 +14,7 @@ const App = function () {
             <Navbar />
             <Routes>
                 <Route path='/' element={<StartPage />} />
+                <Route path='/profile' element={<Profile />} />
                 <Route path='/login'>
                     <Route index element={<Login />} />
                     <Route path='registration' element={<RegistrationForm />} />

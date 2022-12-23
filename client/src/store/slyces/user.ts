@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IUserData, IUserState } from '../../models/states/userReducer';
 
 const initialState: IUserState = {
-    isAuthorization: false,
+    isAuthorization: true,
     userData: null,
 };
 
