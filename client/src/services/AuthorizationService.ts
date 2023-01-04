@@ -18,6 +18,10 @@ class AuthorizationService {
     ): Promise<AxiosResponse<AuthorizationResponse>> {
         return $api.post('user/login', { ...data });
     }
+
+    static async logout() {
+        return $api.get('/user/logout');
+    }
 }
 
 export default AuthorizationService;

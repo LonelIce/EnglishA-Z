@@ -36,7 +36,6 @@ class UserService {
         if (!refreshToken)
             throw ApiError.UnauthorizedError();
         const token = await TokenService.removeToken({refreshToken});
-
         return token;
     }
 
@@ -50,13 +49,13 @@ class UserService {
 
         const user = await UserModel.findById(userData.id);
 
-        const returnData =  await this.#createDtoGenerateAndSaveTokens(user);
+        const returnData = await this.#createDtoGenerateAndSaveTokens(user);
 
         return {...returnData};
 
     }
 
-    #createDtoGenerateAndSaveTokens = async (userModel)=>{
+    #createDtoGenerateAndSaveTokens = async (userModel) => {
         const userDto = new UserDto(userModel);
         const tokens = TokenService.generateTokens({...userDto});
         await TokenService.saveTokenInDataBase(userDto.id, tokens.refreshToken);

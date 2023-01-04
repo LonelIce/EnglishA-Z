@@ -15,8 +15,12 @@ const RegistrationForm: FC = function () {
             const response = await AuthorizationService.registration(
                 registrationFormData
             );
-            console.log(response.data);
-            dispatch(setUserData(response.data));
+            console.log(
+                'При попытке зарегистрироваться сервер прислал данные: ',
+                response.data
+            );
+            const userData = response.data.user;
+            dispatch(setUserData(userData));
         } catch (e: any) {
             console.log(e.response?.data?.message);
             alert(e.response?.data?.message);

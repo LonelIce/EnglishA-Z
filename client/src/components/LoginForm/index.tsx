@@ -15,7 +15,12 @@ const LoginForm: FC = function () {
     const sendLoginFormData = async () => {
         try {
             const response = await AuthorizationService.login(loginFormData);
-            dispatch(setUserData(response.data));
+            console.log(
+                'При попытке войти сервер прислал данные: ',
+                response.data
+            );
+            const userData = response.data.user;
+            dispatch(setUserData(userData));
         } catch (e: any) {
             console.log(e.response?.data?.message);
             alert(e.response?.data?.message);

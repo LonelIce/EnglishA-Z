@@ -46,7 +46,7 @@ class UserController {
 
             response.clearCookie('refreshToken');
 
-            return response.status(200).json(tokenData);
+            return response.sendStatus(200);
 
         } catch (e) {
             next(e);

@@ -1,6 +1,6 @@
 export interface IUserState {
     isAuthorization: boolean;
-    userData: IUserData | null;
+    userData: IUserData;
 }
 
 export interface IUserData {
