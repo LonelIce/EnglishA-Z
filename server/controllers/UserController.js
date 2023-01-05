@@ -75,12 +75,9 @@ class UserController {
             if(!errors.isEmpty())
                 return next(ApiError.BadRequest('Ошибка валидации данных', errors.array()));
 
-            const {email, id} = request.body;
-
-            if(!id)
-                return next(ApiError.BadRequest('В запросе отсутствует ID пользователя'));
-
-            const userData = await UserService.changeUserData({email, id});
+            const {newEmail} = request.body;
+            const currentData =request.user;
+            const userData = await UserService.changeUserData({...currentData},{newEmail});
 
             return response.json(userData);
         }catch (e) {

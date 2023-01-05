@@ -12,6 +12,6 @@ userRouter.post('/registration',
 userRouter.post('/login', UserController.login);
 userRouter.get('/logout', UserController.logout);
 userRouter.get('/refresh', UserController.refresh);
-userRouter.post('/changeUserData', authorizationMiddleware, body('email').isEmail(), body('id').isMongoId(), UserController.changeUserData);
+userRouter.post('/changeUserData', authorizationMiddleware, body('newEmail').isEmail(), UserController.changeUserData);
 
 export default userRouter;

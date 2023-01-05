@@ -55,10 +55,11 @@ class UserService {
 
     }
 
-    changeUserData = async (newData) => {
-        const user = await UserModel.findById(newData.id);
+    changeUserData = async (currentData, newData) => {
+        console.log(currentData)
+        const user = await UserModel.findById(currentData.id);
 
-        user.email = newData.email;
+        user.email = newData.newEmail;
         user.save();
 
         const userDto = new UserDto(user);
