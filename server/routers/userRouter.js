@@ -1,6 +1,7 @@
 import express from 'express';
 import UserController from "../controllers/UserController.js";
 import {body} from "express-validator";
+import authorizationMiddleware from "../middlewares/authorizationMiddleware.js";
 
 const userRouter = express.Router();
 
@@ -11,5 +12,6 @@ userRouter.post('/registration',
 userRouter.post('/login', UserController.login);
 userRouter.get('/logout', UserController.logout);
 userRouter.get('/refresh', UserController.refresh);
+userRouter.post('/changeUserData', authorizationMiddleware, body('email').isEmail(), body('id').isMongoId(), UserController.changeUserData);
 
 export default userRouter;

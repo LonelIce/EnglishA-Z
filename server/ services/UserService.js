@@ -55,6 +55,17 @@ class UserService {
 
     }
 
+    changeUserData = async (newData) => {
+        const user = await UserModel.findById(newData.id);
+
+        user.email = newData.email;
+        user.save();
+
+        const userDto = new UserDto(user);
+
+        return {...userDto};
+    }
+
     #createDtoGenerateAndSaveTokens = async (userModel) => {
         const userDto = new UserDto(userModel);
         const tokens = TokenService.generateTokens({...userDto});
