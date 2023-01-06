@@ -11,6 +11,7 @@ const Profile: FC = function () {
     const sendLogout = async () => {
         try {
             await AuthorizationService.logout();
+            localStorage.removeItem('token');
             dispatch(logout());
         } catch (e: any) {
             console.log(e.response?.data?.message);

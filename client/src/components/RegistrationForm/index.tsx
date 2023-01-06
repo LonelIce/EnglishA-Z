@@ -20,6 +20,7 @@ const RegistrationForm: FC = function () {
                 response.data
             );
             const userData = response.data.user;
+            localStorage.setItem('token', response.data.tokens.accessToken);
             dispatch(setUserData(userData));
         } catch (e: any) {
             console.log(e.response?.data?.message);
