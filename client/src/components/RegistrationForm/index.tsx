@@ -19,12 +19,10 @@ const RegistrationForm: FC = function () {
                 'При попытке зарегистрироваться сервер прислал данные: ',
                 response.data
             );
-            const userData = response.data.user;
             localStorage.setItem('token', response.data.tokens.accessToken);
-            dispatch(setUserData(userData));
-        } catch (e: any) {
+            dispatch(setUserData(response.data.user));
+        } catch (e) {
             console.log(e.response?.data?.message);
-            alert(e.response?.data?.message);
         }
     };
 

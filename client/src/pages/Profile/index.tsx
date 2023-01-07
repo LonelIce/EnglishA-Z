@@ -13,11 +13,11 @@ const Profile: FC = function () {
             await AuthorizationService.logout();
             localStorage.removeItem('token');
             dispatch(logout());
-        } catch (e: any) {
+        } catch (e) {
             console.log(e.response?.data?.message);
-            alert(e.response?.data?.message);
         }
     };
+
     return (
         <main>
             Email-{userData.email}

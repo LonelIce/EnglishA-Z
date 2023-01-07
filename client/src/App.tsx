@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import StartPage from './pages/StartPage';
 import './styles/globale.scss';
@@ -7,8 +7,27 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import RegistrationForm from './components/RegistrationForm';
 import Profile from './pages/Profile';
+import AuthorizationService from './services/AuthorizationService';
+import useAppDispatch from './hooks/useAppDispatch';
+import { setUserData } from './store/slyces/user';
 
-const App = function () {
+const App: FC = function () {
+    const dispatch = useAppDispatch();
+    useEffect(() => {
+        const checkAuth = async () => {
+            try {
+                const response =
+                    await AuthorizationService.checkAuthorization();
+                console.log(response.data);
+                localStorage.setItem('token', response.data.tokens.accessToken);
+                dispatch(setUserData(response.data.user));
+            } catch (e) {
+                console.log(e.response?.data?.message);
+            }
+        };
+        checkAuth();
+    }, []);
+
     return (
         <>
             <Navbar />

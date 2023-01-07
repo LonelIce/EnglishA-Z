@@ -1,5 +1,5 @@
-import { AxiosResponse } from 'axios';
-import $api from '../http';
+import axios, { AxiosResponse } from 'axios';
+import $api, { API_URL } from '../http';
 import { AuthorizationResponse } from '../models/response/AuthorizationResponse';
 import { IRegistrationFormData } from '../components/RegistrationForm/RegistrationForm.types';
 import { ILoginFormData } from '../components/LoginForm/LoginForm.types';
@@ -19,8 +19,16 @@ class AuthorizationService {
         return $api.post('user/login', { ...data });
     }
 
-    static async logout() {
+    static async logout(): Promise<AxiosResponse> {
         return $api.get('/user/logout');
+    }
+
+    static async checkAuthorization(): Promise<
+        AxiosResponse<AuthorizationResponse>
+    > {
+        return axios.get(`${API_URL}user/refresh`, {
+            withCredentials: true,
+        });
     }
 }
 
